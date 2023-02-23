@@ -22,27 +22,6 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-//        for i in 0..<monthArray.count {
-//
-//            dataEntries.append(PieChartDataEntry(value: temperatureArray[i], label: monthArray[i]))
-//
-//        }
-//
-//
-//        // 產生 PieChartDataSet
-//        let DataSet = PieChartDataSet(entries: dataEntries, label: "")
-//
-//        // 改變 chart 顏色
-//        DataSet.colors = ChartColorTemplates.liberty()
-//
-//        // 產生 Data
-//        let Data = PieChartData(dataSet: DataSet)
-//
-//
-//        // 利用 ChartsView 顯示 BarChartData
-//        myView.data = Data
-        
         setChart(dataPoints: monthArray, values: temperatureArray)
 
         
