@@ -1,35 +1,35 @@
 //
-//  ViewController.swift
+//  FourthViewController.swift
 //  Chart
 //
-//  Created by Yen Hung Cheng on 2023/2/13.
+//  Created by Yen Hung Cheng on 2023/2/25.
 //
 
 import UIKit
 import Charts
 
-class ViewController: UIViewController {
+class FourthViewController: UIViewController {
 
-    
-    @IBOutlet weak var myView: BarChartView!
+    @IBOutlet weak var horizontalBarChart: HorizontalBarChartView!
     
     
     var monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
     var temperatureArray:[Double] = [30, 21, 22, 23, 24, 5, 17, 27, 28, 20 ,54, 31, 19]
     
-
+    var dataEntries: [BarChartDataEntry] = []
+    
+    
     // 自定義直方圖顏色
     var myColors: [UIColor] = [.red, .orange, .yellow, .green, .blue, .systemRed, .systemGray, .black, .gray, .systemYellow, .systemMint, .purple]
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setChart(dataPoints: monthArray, values: temperatureArray)
         
     }
-    
     
     func setChart(dataPoints: [String], values: [Double]) {
         
@@ -48,42 +48,42 @@ class ViewController: UIViewController {
         barChartDataSet.colors = [.red]
         
         // 設為 內置的顏色模版 ChartColorTemplates
-        barChartDataSet.colors = ChartColorTemplates.joyful()
+        barChartDataSet.colors = ChartColorTemplates.material()
         
         // 設為 自己排列的顏色
-        barChartDataSet.colors = myColors
+//        barChartDataSet.colors = myColors
         
         // 產生 barChartData
         let barChartData = BarChartData(dataSet: barChartDataSet)
         
         // 利用 ChartsView 顯示 BarChartData
-        myView.data = barChartData
+        horizontalBarChart.data = barChartData
 
         // 將 x 方向的格式修改成我們設定的字串
-        myView.xAxis.valueFormatter = IndexAxisValueFormatter(values: monthArray)
+        horizontalBarChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: monthArray)
         
         
         // barChartView 細部設定
         // 隱藏 x 垂直的隔線
-        myView.xAxis.drawGridLinesEnabled = false
+        horizontalBarChart.xAxis.drawGridLinesEnabled = false
         
         // 在 X 軸上繪製一條水平的軸線
-        myView.xAxis.drawAxisLineEnabled = true
+        horizontalBarChart.xAxis.drawAxisLineEnabled = true
                 
         // 隱藏 y 軸水平線
-        myView.leftAxis.drawGridLinesEnabled = false
-        myView.rightAxis.drawGridLinesEnabled = false
+        horizontalBarChart.leftAxis.drawGridLinesEnabled = false
+        horizontalBarChart.rightAxis.drawGridLinesEnabled = false
         
         
         // x 標籤相對於圖表的位置
-        myView.xAxis.labelPosition = .bottom
+        horizontalBarChart.xAxis.labelPosition = .bottom
 
         // 隱藏 LineChartView 中 x 軸上的標籤
 //        myView.xAxis.labelTextColor = .clear
         // 隱藏右邊欄位的資料
-        myView.rightAxis.enabled = false
+        horizontalBarChart.rightAxis.enabled = false
         // 隱藏左邊欄位的資料
-        myView.leftAxis.enabled = false
+        horizontalBarChart.leftAxis.enabled = false
                 
         // 隱藏數值文字
 //        myView.data?.setValueTextColor(.clear)
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         barChartData.barWidth = 0.85
         
         // 開啟 直方的陰影
-        myView.drawBarShadowEnabled = false
+        horizontalBarChart.drawBarShadowEnabled = false
         
         // 直方 的邊框顏色、線寬
 //        barChartDataSet.barBorderWidth = 2
@@ -103,18 +103,16 @@ class ViewController: UIViewController {
         barChartDataSet.highlightEnabled = false
                 
         // 關閉 x 軸縮放
-        myView.scaleXEnabled = false
+        horizontalBarChart.scaleXEnabled = false
         // 關閉 y 軸縮放
-        myView.scaleYEnabled = true
+        horizontalBarChart.scaleYEnabled = true
         // 關閉雙擊縮放
-        myView.doubleTapToZoomEnabled = false
+        horizontalBarChart.doubleTapToZoomEnabled = false
+                
         
     }
     
     
-
-    
     
 
 }
-
