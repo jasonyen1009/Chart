@@ -20,6 +20,7 @@
 		9684573A2999E4D6009D2017 /* ChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968457392999E4D6009D2017 /* ChartTests.swift */; };
 		968457442999E4D6009D2017 /* ChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968457432999E4D6009D2017 /* ChartUITests.swift */; };
 		968457462999E4D6009D2017 /* ChartUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968457452999E4D6009D2017 /* ChartUITestsLaunchTests.swift */; };
+		96ECD91629AA4C3E00F6E217 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECD91529AA4C3E00F6E217 /* FourthViewController.swift */; };
 		D81E0E247C8A4A38CFDC0C93 /* Pods_ChartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE5033C83E14D4A66F72CA4 /* Pods_ChartTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		9684573F2999E4D6009D2017 /* ChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968457432999E4D6009D2017 /* ChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartUITests.swift; sourceTree = "<group>"; };
 		968457452999E4D6009D2017 /* ChartUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96ECD91529AA4C3E00F6E217 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		9C71026C84D49A847D1A699E /* Pods-Chart-ChartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chart-ChartUITests.release.xcconfig"; path = "Target Support Files/Pods-Chart-ChartUITests/Pods-Chart-ChartUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A68D35400AEC4A77467B6227 /* Pods-Chart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chart.release.xcconfig"; path = "Target Support Files/Pods-Chart/Pods-Chart.release.xcconfig"; sourceTree = "<group>"; };
 		B862EE21ABFBD2A82D3F16FE /* Pods-Chart-ChartUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chart-ChartUITests.debug.xcconfig"; path = "Target Support Files/Pods-Chart-ChartUITests/Pods-Chart-ChartUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				968457242999E4D4009D2017 /* SceneDelegate.swift */,
 				968457262999E4D4009D2017 /* ViewController.swift */,
 				968457282999E4D4009D2017 /* Main.storyboard */,
+				96ECD91529AA4C3E00F6E217 /* FourthViewController.swift */,
 				96637A69299BC9B60028F433 /* SecondViewController.swift */,
 				96637A6B299BCBB90028F433 /* ThirdViewController.swift */,
 				9684572B2999E4D6009D2017 /* Assets.xcassets */,
@@ -412,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96ECD91629AA4C3E00F6E217 /* FourthViewController.swift in Sources */,
 				96637A6A299BC9B60028F433 /* SecondViewController.swift in Sources */,
 				968457272999E4D4009D2017 /* ViewController.swift in Sources */,
 				96637A6C299BCBB90028F433 /* ThirdViewController.swift in Sources */,

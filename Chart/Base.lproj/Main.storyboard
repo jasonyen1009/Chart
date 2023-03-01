@@ -113,6 +113,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4ZI-nD-Pwk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7F8-PB-fn2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -120,11 +121,45 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xQB-FO-UJv"/>
                         <segue destination="68F-xk-wjJ" kind="relationship" relationship="viewControllers" id="c4m-T8-dtL"/>
                         <segue destination="m6g-H4-hrQ" kind="relationship" relationship="viewControllers" id="YAp-YX-Ykk"/>
+                        <segue destination="uMT-XB-gbn" kind="relationship" relationship="viewControllers" id="Bae-5X-yW2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnD-k0-33X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1732" y="-923"/>
+        </scene>
+        <!--Pie-->
+        <scene sceneID="XJX-ls-1J0">
+            <objects>
+                <viewController id="uMT-XB-gbn" customClass="FourthViewController" customModule="Chart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyN-FS-eQd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHa-QW-mpS" customClass="HorizontalBarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="59" width="393" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="xuW-Ho-1JH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="miq-0C-S9y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xHa-QW-mpS" firstAttribute="trailing" secondItem="miq-0C-S9y" secondAttribute="trailing" id="BMm-cA-GaN"/>
+                            <constraint firstItem="xHa-QW-mpS" firstAttribute="leading" secondItem="miq-0C-S9y" secondAttribute="leading" id="V5i-6Z-orw"/>
+                            <constraint firstItem="xHa-QW-mpS" firstAttribute="top" secondItem="miq-0C-S9y" secondAttribute="top" id="hHQ-Hz-n1h"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pie" image="chart.pie" catalog="system" id="NJF-A0-4XQ"/>
+                    <connections>
+                        <outlet property="horizontalBarChart" destination="xHa-QW-mpS" id="r0Q-qF-VLO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJe-tT-xBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3166" y="-56"/>
         </scene>
     </scenes>
     <resources>
