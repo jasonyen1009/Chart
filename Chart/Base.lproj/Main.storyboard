@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="1732" y="-923"/>
         </scene>
-        <!--Pie-->
+        <!--Bar-->
         <scene sceneID="XJX-ls-1J0">
             <objects>
                 <viewController id="uMT-XB-gbn" customClass="FourthViewController" customModule="Chart" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,7 +152,7 @@
                             <constraint firstItem="xHa-QW-mpS" firstAttribute="top" secondItem="miq-0C-S9y" secondAttribute="top" id="hHQ-Hz-n1h"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pie" image="chart.pie" catalog="system" id="NJF-A0-4XQ"/>
+                    <tabBarItem key="tabBarItem" title="Bar" image="chart.bar.doc.horizontal" catalog="system" id="NJF-A0-4XQ"/>
                     <connections>
                         <outlet property="horizontalBarChart" destination="xHa-QW-mpS" id="r0Q-qF-VLO"/>
                     </connections>
@@ -164,6 +164,7 @@
     </scenes>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="89"/>
+        <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
         <image name="chart.pie" catalog="system" width="128" height="123"/>
         <image name="chart.xyaxis.line" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
