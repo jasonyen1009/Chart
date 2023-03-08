@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
-    var temperatureArray:[Double] = [30, 21, 22, 23, 24, 5, 17, 27, 28, 20 ,54, 31, 19]
+    var temperatureArray:[Double] = [30, 20, 20, 30, 24, 5, 17, 27, 28, 20 ,54, 31, 19]
     
 
     // 自定義直方圖顏色
@@ -35,23 +35,37 @@ class ViewController: UIViewController {
         
         // 產生 barChartEntry
         var dataEntry: [BarChartDataEntry] = []
+        // 保存 colors
+        var valueColors = [UIColor]()
+
+        let threshold: Double = 20
         
         // 產生 barChartEntry 每筆資料
         for i in 0..<dataPoints.count {
             dataEntry.append(BarChartDataEntry(x: Double(i), y: values[i]))
+            
+            if values[i] > threshold {
+                valueColors.append(.black)
+            }else if values[i] == threshold {
+                valueColors.append(.red)
+            }else {
+                valueColors.append(.green)
+            }
+            
         }
         
         // 產生 barChartDataSet
         let barChartDataSet = BarChartDataSet(entries: dataEntry, label: "test")
+        barChartDataSet.valueColors = valueColors
         
         // 設為 單一顏色
-        barChartDataSet.colors = [.red]
+//        barChartDataSet.colors = [.red]
         
         // 設為 內置的顏色模版 ChartColorTemplates
         barChartDataSet.colors = ChartColorTemplates.joyful()
         
         // 設為 自己排列的顏色
-        barChartDataSet.colors = myColors
+//        barChartDataSet.colors = myColors
         
         // 產生 barChartData
         let barChartData = BarChartData(dataSet: barChartDataSet)
@@ -79,14 +93,17 @@ class ViewController: UIViewController {
         myView.xAxis.labelPosition = .bottom
 
         // 隱藏 LineChartView 中 x 軸上的標籤
-//        myView.xAxis.labelTextColor = .clear
+//        myView.xAxis.labelTextColor = .red
+        
         // 隱藏右邊欄位的資料
         myView.rightAxis.enabled = false
         // 隱藏左邊欄位的資料
         myView.leftAxis.enabled = false
                 
         // 隱藏數值文字
-//        myView.data?.setValueTextColor(.clear)
+//        myView.data?.setValueTextColor(.red)
+//        myView.data?.setValueTextColor(.red, forItemAt: i)
+
         
         // 修改 直方的寬度
         barChartData.barWidth = 0.85
@@ -101,7 +118,9 @@ class ViewController: UIViewController {
         
         // 關閉點擊後的變色
         barChartDataSet.highlightEnabled = false
-                
+        
+//        barChartDataSet.valueColors
+        
         // 關閉 x 軸縮放
         myView.scaleXEnabled = false
         // 關閉 y 軸縮放

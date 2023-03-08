@@ -43,6 +43,7 @@ class ThirdViewController: UIViewController {
         let piechartdata = PieChartData(dataSet: piechartdataset)
         // 利用 ChartsView 顯示 BarChartData
         myView.data = piechartdata
+        
     }
     
 
