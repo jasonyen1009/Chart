@@ -100,7 +100,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Pie" image="chart.pie" catalog="system" id="5dQ-8L-6AS"/>
                     <connections>
-                        <outlet property="myView" destination="FCf-B7-goH" id="8tx-QZ-vqE"/>
+                        <outlet property="myView" destination="FCf-B7-goH" id="coV-LX-LdA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59A-ui-obU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
